@@ -6,6 +6,12 @@ class Dots < Formula
   license "MIT"
   head "https://github.com/navid-rji/dots.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/navid-rji/homebrew-tap/releases/download/dots-0.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "b91443102d6678d78177cbaff465d56700720301273f92e363828a164e543819"
+    sha256 cellar: :any,                 x86_64_linux: "5fa27c96079ffbeb0d94e726c8c346ea42db433c22b8e4e00bc15010624446d6"
+  end
+
   depends_on "go" => :build
 
   def install
